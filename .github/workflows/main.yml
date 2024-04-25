@@ -29,5 +29,9 @@ jobs:
       # Automation using Any CLI
       - name: Apply API Manager Policy
         run: >
-		anypoint-cli-v4 api-mgr:policy:apply --config '{"rateLimits": [{ "maximumRequests": 3, "timePeriodInMilliseconds": 60000 }], "clusterizable": true, "exposeHeaders": false }' 19445711 rate-limiting --policyVersion 1.4.0 --client_id e04980155f3f4e27ad726980edf7f5ef --client_secret a8C9F82263C54516A8484f377d4e5439 --environment Sandbox
-
+          anypoint-cli-v4 api-mgr:policy:apply --config '{"rateLimits": [{
+          "maximumRequests": 3, "timePeriodInMilliseconds": 60000 }],
+          "clusterizable": true, "exposeHeaders": false }' 19445711
+          rate-limiting --policyVersion 1.4.0 --client_id
+          e04980155f3f4e27ad726980edf7f5ef --client_secret
+          a8C9F82263C54516A8484f377d4e5439 --environment Sandbox
